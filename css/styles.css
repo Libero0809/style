@@ -17,6 +17,7 @@
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
   --bs-red: #dc3545;
+  --bs-utah: #CC0000;
   --bs-orange: #fd7e14;
   --bs-yellow: #ffc107;
   --bs-green: #198754;
@@ -1500,6 +1501,7 @@ progress {
   .col-lg-12 {
     flex: 0 0 auto;
     width: 100%;
+    margin-bottom: 5rem;
   }
 
   .offset-lg-0 {
@@ -8789,9 +8791,9 @@ fieldset:disabled .btn {
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-red {
+.bg-utah {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+  background-color: var(--bs-utah) !important;
 }
 
 .bg-black {
