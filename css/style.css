@@ -168,3 +168,13 @@ a.anchor {
   text-align: center;
   font-size: 20px;
 }
+
+.style3d-photo {
+  width: 180px;
+  height: 200px;
+  object-fit: contain;
+  border: 2px solid lightblue;
+  background-color: #0053c7;
+  padding-left: 10px;
+  padding-right: 10px;
+}
