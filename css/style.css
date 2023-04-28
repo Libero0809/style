@@ -11,7 +11,8 @@ body {
 }
 
 h2 {
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 
 h3 {
@@ -24,6 +25,11 @@ h4 {
 
 p {
   line-height: 1.5;
+}
+
+p.indent {
+  text-indent: 2em;
+  text-align: justify;
 }
 
 a {
@@ -47,9 +53,11 @@ a.anchor {
   left: 0;
   right: 0;
   top: 0;
-  height: 70px;
+  height: 90px;
   z-index: 100;
   background-color: var(--utah-red);
+  /* wrap when width too small */
+  flex-wrap: wrap;
 }
 
 .logos {
@@ -116,7 +124,7 @@ a.anchor {
 .title {
   position: absolute;
   left: 15%;
-  top: 25%;
+  top: 20%;
   width: 70%;
   height: 70%;
 }
@@ -125,7 +133,7 @@ a.anchor {
   color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 13vw;
-  font-weight: 600;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -141,6 +149,30 @@ a.anchor {
   transform: translate(-50%, 0);
 }
 
+.people {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 70%;
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  min-width: 450px;
+  position: relative;
+}
+
+.publications {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 70%;
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  min-width: 450px;
+  position: relative;
+}
+
 .intro {
   padding-left: 10px;
 }
@@ -148,7 +180,20 @@ a.anchor {
 .member {
   display: flex;
   align-items: center;
+  flex-direction: column;
+}
+
+.member:before {
+  content: "";
+  border: 1px solid #d3d3d3;
+  align-self: stretch;
+}
+
+.photo-intro {
+  display: flex;
+  align-items: center;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .person-intro {
@@ -158,14 +203,12 @@ a.anchor {
 .person-photo {
   width: 200px;
   height: 200px;
-  border-radius: 100px;
   object-fit: cover;
   border: 2px solid lightblue;
 }
 
 .person-name {
-  margin: 5px;
-  text-align: center;
+  text-align: left;
   font-size: 20px;
 }
 
@@ -177,4 +220,70 @@ a.anchor {
   background-color: #0053c7;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+#page {
+  float: left;
+  clear: both;
+  width: 900px;
+  margin-left: 30px;
+}
+
+.icon {
+  float: left;
+  margin-right: 25px;
+  margin-bottom: -5px;
+}
+
+.shadow {
+  -moz-box-shadow: 3px 3px 4px #000;
+  -webkit-box-shadow: 3px 3px 4px #000;
+  box-shadow: 3px 3px 4px #000;
+  /* For IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+  /* For IE 5.5 - 7 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
+.button {
+  background-color: #777777;
+  border: none;
+  color: white;
+  padding: 2px 6px;
+  margin: 4px 0px 4px 0px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: #999999;
+  color: white;
+}
+
+.year {
+  display: flex;
+  flex-direction: column;
+}
+
+.year:before {
+  content: "";
+  margin-bottom: 20px;
+  border: 1px solid #d3d3d3;
+  align-self: stretch;
+}
+
+a.inline-ref {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.inline-ref:hover {
+  text-decoration: underline;
+}
+
+w
+{
+  font-weight: bold;
 }
